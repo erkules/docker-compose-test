@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../node_modules/loopback-ds-timestamp-mixin",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "mongoDS",
+    "public": true
+  },
+  "AccessToken": {
+    "dataSource": "mongoDS",
+    "public": true
+  },
+  "ACL": {
+    "dataSource": "mongoDS",
+    "public": true
+  },
+  "RoleMapping": {
+    "dataSource": "mongoDS",
+    "public": true
+  },
+  "Role": {
+    "dataSource": "mongoDS",
+    "public": true
+  },
+  "CoffeeShop": {
+    "dataSource": "mongoDS",
+    "public": true
+  }
+
+}

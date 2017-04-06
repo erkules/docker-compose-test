@@ -1,16 +1,20 @@
-loopback:
-  build: .
-  ports:
-    - 3000:3000
-  links:
-    - mongodb
-  environment:
-    VIRTUAL_HOST: api.company.com
-    VIRTUAL_PORT: 3000
-    LETSENCRYPT_EMAIL: user@company.com
-    LETSENCRYPT_HOST: api.company.com
-
-mongodb:
-  build: ./MongoDB
-  volumes:
-    - /var/lib/mongodb:/var/lib/mongodb
+version: '2'
+services:
+  loopback:
+    build: .
+    ports:
+      - 3000:3000
+    links:
+      - mongodb
+    environment:
+      VIRTUAL_HOST: api.company.com
+      VIRTUAL_PORT: 3000
+      LETSENCRYPT_EMAIL: user@company.com
+      LETSENCRYPT_HOST: api.company.com
+  
+  mongodb:
+    build: ./MongoDB
+    volumes:
+      - mongodb:/var/lib/mongodb
+volumes:
+  mongodb:

@@ -12,3 +12,5 @@ loopback:
 
 mongodb:
   build: ./MongoDB
+  volumes:
+    - /var/lib/mongodb:/var/lib/mongodb

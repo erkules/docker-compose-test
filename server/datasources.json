@@ -8,7 +8,7 @@
     "connector": "memory"
   },
   "mongoDS": {
-    "host": "172.17.0.2",
+    "host": "mongodb",
     "port": 27017,
     "url": "",
     "database": "company",
